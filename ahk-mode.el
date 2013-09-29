@@ -87,7 +87,9 @@
   :type 'integer
   :group 'ahk-mode)
 
-(defcustom ahk-syntax-directory nil
+(defcustom ahk-syntax-directory
+  (concat (file-name-directory (or load-file-name buffer-file-name))
+          "/syntax/")
   "The indetion level."
   :type 'directory
   :group 'ahk-mode)
